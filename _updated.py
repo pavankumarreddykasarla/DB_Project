@@ -17,7 +17,7 @@ mydb = mysql.connector.connect(
     #database ='test',
     database='playstoredb',
     user='admin',
-    password='Welcome1'
+    password='*****'
 )
 
 # Batch insert the rows into the MySQL table
