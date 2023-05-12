@@ -34,9 +34,6 @@ df = df[~Minimum_Android_null_values]
 Released_null_values = df['Released'].isnull()
 df = df[~Released_null_values]
 
-# Replace Currency null values with NNN.
-df['Currency'] = df['Currency'].fillna('NNN')
-
 #insert random value into the developer as we have 33% null values in this column
 df['Developer Website'].fillna('N/A', inplace=True)
 
@@ -45,7 +42,7 @@ df['Privacy Policy'].fillna('N/A', inplace=True)
 
 #Data Preprocessing
 # Filter the rows where CONTENT WRITING is Everyone or Teen
-df = df.loc[df['Content Rating'].isin(['Everyone', 'Teen'])];
+#df = df.loc[df['Content Rating'].isin(['Everyone', 'Teen'])];
 
 #dropping these columns as we dont have any use and there are lot of null values. 
 df = df.drop(['Privacy Policy', 'Scraped Time', 'Free', 'Developer Website'], axis=1)
